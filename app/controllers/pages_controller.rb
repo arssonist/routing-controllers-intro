@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_action :set_kitten_url, only: [:kitten, :kittens]
 
   def welcome
     @header = "This is the weclome page"
@@ -12,11 +13,41 @@ class PagesController < ApplicationController
     @header = "This is the contest page"
   end
 
-  def kitten
-    @header = "How do I make the homepage with a pic?"
-    requested_size = params[:size]
-    @kitten_url = "http://placekitten.com/#{requested_size}"
+#First Kitten Methods
+  # def kitten
+  #   @header = "How do I make the homepage with a pic?"
+  #   requested_size = params[:size]
+  #   @kitten_url = "http://placekitten.com/#{requested_size}"
+  # end
+  #
+  # def kittens
+  #   requested_size = params[:size]
+  #   @kitten_url = "http://placekitten.com/#{requested_size}"
+  # end
+
+
+#Second Kitten Methods
+    # def kitten
+    #   set_kitten_url
+    # end
+    #
+    # def kittens
+    #   set_kitten_url
+    # end
+    #
+    # def set_kitten_url
+    #   requested_size = params[:size]
+    #   @kitten_url="http://placekitten.com/#{requested_size}"
+    # end
+
+    def kitten
+    end
+
+    def kittens
+    end
+
+    def set_kitten_url
+      requested_size = params[:size]
+      @kitten_url = "http://placekitten.com/#{requested_size}"
+    end
   end
-
-
-end

@@ -11,6 +11,8 @@ Rails.application.routes.draw do
   get '/kitten'=> 'pages#kitten'
 
   get '/kitten/:size' => 'pages#kitten'
+
+  get '/kittens/:size' => 'pages#kittens'
   # get '/kitten/:size' => 'pages#kitten'
   #the size will be connected to the params
 
