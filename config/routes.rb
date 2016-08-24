@@ -13,6 +13,11 @@ Rails.application.routes.draw do
   get '/kitten/:size' => 'pages#kitten'
 
   get '/kittens/:size' => 'pages#kittens'
+
+  get '/secrets/:magic_word' => 'pages#secrets'
+
+  get '/you_lose' => 'pages#you_lose'
+
   # get '/kitten/:size' => 'pages#kitten'
   #the size will be connected to the params
 

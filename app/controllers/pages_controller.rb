@@ -15,6 +15,17 @@ class PagesController < ApplicationController
     redirect_to "/welcome"
   end
 
+  def secrets
+    puts params
+    if params[:magic_word] == "kitten"
+      redirect_to '/kitten'
+    else
+      flash[:notice] = "Sorry, you're not authorized to see that page!"
+      redirect_to
+      @you_lose
+    end
+  end
+
 #First Kitten Methods
   # def kitten
   #   @header = "How do I make the homepage with a pic?"
@@ -49,7 +60,9 @@ class PagesController < ApplicationController
     end
 
     def set_kitten_url
+      if params[:size]
       requested_size = params[:size]
       @kitten_url = "http://placekitten.com/#{requested_size}"
+      end
     end
   end
