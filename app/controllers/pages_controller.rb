@@ -4,4 +4,7 @@ class PagesController < ApplicationController
     # render :about
   end
 
+  def about
+  end
+
 end
