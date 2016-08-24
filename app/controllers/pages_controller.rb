@@ -15,14 +15,16 @@ class PagesController < ApplicationController
     redirect_to "/welcome"
   end
 
+  def you_lose
+  end
+
   def secrets
     puts params
     if params[:magic_word] == "kitten"
       redirect_to '/kitten'
     else
       flash[:notice] = "Sorry, you're not authorized to see that page!"
-      redirect_to
-      @you_lose
+      redirect_to '/you_lose'
     end
   end
 
