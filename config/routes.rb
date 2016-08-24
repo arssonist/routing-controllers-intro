@@ -8,6 +8,12 @@ Rails.application.routes.draw do
 
   get '/contest' => 'pages#contest'
 
+  get '/kitten'=> 'pages#kitten'
+
+  get '/kitten/:size' => 'pages#kitten'
+  # get '/kitten/:size' => 'pages#kitten'
+  #the size will be connected to the params
+
   #with /welocome after home url
 
 

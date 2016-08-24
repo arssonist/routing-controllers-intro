@@ -12,4 +12,11 @@ class PagesController < ApplicationController
     @header = "This is the contest page"
   end
 
+  def kitten
+    @header = "How do I make the homepage with a pic?"
+    requested_size = params[:size]
+    @kitten_url = "http://placekitten.com/#{requested_size}"
+  end
+
+
 end
